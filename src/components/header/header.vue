@@ -17,6 +17,10 @@
           <span class="text">{{seller.supports[0].description}}</span>
         </div>
       </div>
+      <div v-if="seller.supports" class="support-count">
+        <span class="count">{{seller.supports.length}}</span>
+        <i class="icon-thumb_up"></i>
+      </div>
     </div>
     <div class="bullentin-wrapper"></div>
   </div>
@@ -41,6 +45,7 @@
     color: #fff
     background: #000
     .content-wrapper
+      position: relative
       padding: 24px 12px 18px 24px
       font-size:0
       .avatar
@@ -52,6 +57,11 @@
         display: inline-block
         font-size:14px
         margin-left: 16px
+      .support-count
+        position: absolute
+        right: 12px
+        bottom: 18px
+
       .title
         margin: 2px 0 8px 0
        .description
@@ -92,5 +102,5 @@
             bg-image('special_1')
         .text
           line-height: 12px
-          font-size: 12px
+          font-size: 10px
 </style>
